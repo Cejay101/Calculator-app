@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+:root{
+  --primaryColor:#7fcfa4;
+  --whiteColor:#dfdede;
+  --darkColor: #131313;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #23283b;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: var(--darkColor);
+  /* max-width: 50rem; */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 3.5rem;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.display-area {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: (2, minmax(40px, auto));
+  word-wrap: break-word;
+  padding-bottom: 3rem;
+  border-bottom: 1px rgba(128, 128, 128, 0.116) solid;
+  margin-bottom: 2rem;
+}
+
+.display-area .current-input {
+  text-align: right;
+  height: 8vh;
+  color:var(--whiteColor);
+  font-size: xx-large;
+  line-height: 2;
+  word-wrap: break-word;
+}
+
+.display-area .answer-screen {
+  text-align: right;
+  color: rgba(150, 150, 150, 0.87);
+  height: 0.7rem;
+  line-height: 3;
+  font-size: larger;
+}
+
+.keypad-buttons {
+  display: grid;
+  grid: repeat(5, 70px) / repeat(4, 70px);
+  gap: 2rem;
+}
+
+.keypad-buttons button {
+  outline: none;
+  border: none;
+  border-radius: 20%;
+  background: #232534;
+  color: var(--whiteColor);
+  font-size: x-large;
+  cursor: pointer;
+}
+
+.keypad-buttons .fun_btn {
+  color:var(--darkColor);
+  background: var(--primaryColor);
+  font-weight: bold;
+}
+
+.num_btn:hover {
+  background: var(--primaryColor);
+}
+
+.fun_btn:hover {
+  background: var(--primaryColor);
+}
+.mode{
+  padding: 1rem;
+  margin: 2rem auto 0 ;
+  border: none;
+}
+.white{background-color:var(--whiteColor) ;}
+.light{ background: var(--whiteColor);}
+.dark{ background: #131313; color: var(--whiteColor);}
+.hidden{
+  display: none;
+}
+
+/* 600px */
+@media only screen and (max-width: 37.4em) {
+  body {
+    background: var(--darkColor);
+    align-items: flex-start;
+   
+  }
+}
+.keypad-buttons {
+  display: grid;
+  grid: repeat(5, 50px) / repeat(4, 50px);
+  gap: 2rem;
+}
+.container {
+ MArgin: 0 auto;
+}
+
+
